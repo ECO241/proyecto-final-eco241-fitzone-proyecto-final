@@ -13,7 +13,7 @@ app.use(express.static('src'));
 // Usuarios registrados (simulación, puedes cambiar esto para usar una base de datos)
 let users = [];
 
-// Ruta para manejar el registro de usuarios
+// Endpoint para manejar el registro de usuarios
 app.post('/register', (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
@@ -29,7 +29,7 @@ app.post('/register', (req, res) => {
   res.redirect('/pages/login/login.html');
 });
 
-// Ruta para manejar el inicio de sesión
+// Endpoint para manejar el inicio de sesión
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   const user = users.find(user => user.username === username && user.password === password);
@@ -40,7 +40,7 @@ app.post('/login', (req, res) => {
   res.redirect('/pages/home/home.html');
 });
 
-// Redirección a la página de inicio de sesión al acceder a la ruta raíz
+// Manejo de la solicitud GET para la ruta raíz
 app.get('/', (req, res) => {
   res.redirect('/pages/login/login.html');
 });
