@@ -1,0 +1,45 @@
+* {
+    background-color: #03080e;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #ff8b37, #ffc700);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-top: 0px;
+  }
+  p {
+    color: white;
+    background: none;
+  }
+  
+  img {
+    max-width: 40px;
+  }
+
+  .gradient-button {
+    margin-top: 190px;
+    height: 60px;
+    width: 320px;
+    background: linear-gradient(#ffc700, #ff8b37);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .gradient-button:hover {
+    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  }
+  

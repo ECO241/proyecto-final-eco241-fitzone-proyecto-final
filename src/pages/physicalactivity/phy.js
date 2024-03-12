@@ -44,7 +44,7 @@ class PhysicalAct extends HTMLElement {
   <input type="checkbox" id="container4" class="checkbox">
 </label>
 </div>
-<button class="gradient-button">Continue</button>
+<button class="gradient-button" onclick="window.location.href='../completeProf/profilesign.html';">Continue</button>
 </center>
         `;
   }
