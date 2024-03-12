@@ -17,8 +17,17 @@ class ProfileConfig extends HTMLElement {
               <h1>Complete Your Profile</h1>
               <center>
                   <p>Complete your profile to enjoy a personalized experience</p>
-              </center>
+              
   
+              <div class="circle-container">
+  <img src="../../imgs/user.png" alt="User Image" class="user-image">
+</div>
+</center>
+
+            
+            
+            
+
   
               <center>
   <button class="gradient-button">Let's get started!</button>
