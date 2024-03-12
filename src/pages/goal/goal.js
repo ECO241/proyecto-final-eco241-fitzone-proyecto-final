@@ -11,6 +11,7 @@ class GoalScreen extends HTMLElement {
    render(){
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" type="text/css" href="./goal.css"></head>
+    <img src="../../imgs/left arrow.png">
 
     <h1>What is your goal?</h1>
     <center> <p>Select your fitness goal to personalize 

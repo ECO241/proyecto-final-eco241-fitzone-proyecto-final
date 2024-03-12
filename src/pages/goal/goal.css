@@ -9,6 +9,7 @@ h1 {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  margin-top: 0px;
 }
 p {
   color: white;
@@ -108,3 +109,6 @@ p {
     background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
   }
   
+  img {
+    max-width: 40px;
+  }
