@@ -103,6 +103,8 @@ class GoalScreen extends HTMLElement {
 <label for="checkbox6"></label>
 </div>
 </div> </center>
+
+<center><button class="gradient-button">Continue</button></center>
     `
    }
 }
