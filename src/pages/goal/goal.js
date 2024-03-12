@@ -105,8 +105,10 @@ class GoalScreen extends HTMLElement {
 </div>
 </div> </center>
 
-<center><button class="gradient-button">Continue</button></center>
-    `
+<center>
+  <button class="gradient-button" onclick="window.location.href='../physicalactivity/physicalactivity.html';">Continue</button>
+</center> 
+`
    }
 }
 

@@ -59,56 +59,57 @@ p {
 }
 
 .round {
-    display: flex;
-    align-items: center;
-    position: relative;
-    background: none;
-  }
-  
-  .round label {
-    background-color: #fff; 
-    border-radius: 50%;
-    cursor: pointer;
-    height: 28px;
-    width: 28px;
-    order: 2;
-    transition: background 0.3s; 
-  }
-  
-  .round input[type="checkbox"] {
-    visibility: hidden;
-    background: none;
-  }
-  
-  .round label + input[type="checkbox"] {
-    margin-left: 20px;
-    background: none;
-  }
-  
-  .round input[type="checkbox"]:checked + label {
-    background: linear-gradient(#FFC700, #FF8B37); 
-    border-color: transparent;
-  }
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: none;
+}
 
-  .gradient-button {
-    margin-top: 30px;
-    height: 60px;
-    width: 320px;
-    background: linear-gradient(#FFC700, #FF8B37); 
-    border: none;
-    color: white; 
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 15px; 
-    cursor: pointer; 
-    font-size: 16px;
-    transition: background 0.3s; 
-  }
-  
-  .gradient-button:hover {
-    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
-  }
-  
-  img {
-    max-width: 40px;
-  }
+.round label {
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  order: 2;
+  transition: background 0.3s;
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+  background: none;
+}
+
+.round label + input[type="checkbox"] {
+  margin-left: 20px;
+  background: none;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background: linear-gradient(#ffc700, #ff8b37);
+  border-color: transparent;
+}
+
+.gradient-button {
+  margin-top: 10px;
+  height: 60px;
+  width: 320px;
+  background: linear-gradient(#ffc700, #ff8b37);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+}
+
+img {
+  max-width: 40px;
+}
