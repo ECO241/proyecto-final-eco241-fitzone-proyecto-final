@@ -23,44 +23,40 @@ class ProfileConfig extends HTMLElement {
 </div>
 </center>
 
+      <center>
+       <form>
+       <div class="input-container">
+         <input type="text" id="nombre" name="nombre" placeholder="Full name" required>
+       </div>
+     
+       <div class="input-container">
+       <input type="date" id="cumpleanos" name="cumpleanos" placeholder="Date of birth" required class="custom-input">
+     </div>
+     
+       <div class="input-container">
+         <select id="genero" name="genero" required>
+           <option value="" disabled selected>Gender</option>
+           <option value="masculino">Male</option>
+           <option value="femenino">Female</option>
+           <option value="other">Other</option>
+         </select>
+       </div>
+     
+       <div class="input-container2">
+         <div class="input-group">
+           <input type="number" id="altura" name="altura" placeholder="Height" required>
+         </div>
+     
+         <div class="input-group">
+           <input type="number" id="peso" name="peso" placeholder="Weight" required>
+         </div>
+       </div>
+     
        <center>
-<form>
-<div class="input-container">
-  <input type="text" id="nombre" name="nombre" required>
-  <label for="nombre">Full name</label>
-</div>
-
-<div class="input-container">
-<input type="date" id="cumpleanos" name="cumpleanos" required>
-<label for="cumpleanos">Date of birth</label>
-</div>
-
-<div class="input-container">
-  <select id="genero" name="genero" required>
-    <option value="" disabled selected>Gender</option>
-    <option value="masculino">Male</option>
-    <option value="femenino">Female</option>
-    <option value="other">Other</option>
-  </select>
-  <label for="genero"></label>
-</div>
-
-<div class="input-container">
-<div class="input-group">
-  <input type="number" id="altura" name="altura" required>
-  <label for="altura">Height</label>
-</div>
-
-<div class="input-group">
-  <input type="number" id="peso" name="peso" required>
-  <label for="peso">Weight</label>
-</div>
-</div>
-</form>  
-  </center>
-              <center>
-  <button class="gradient-button">Let's get started!</button>
-  </center>
+         <button class="gradient-button">Let's get started!</button>
+       </center>
+     </form>
+     </center>
           `;
     }
   }

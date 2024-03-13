@@ -1,80 +1,77 @@
 * {
-    background-color: #03080e;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  h1 {
-    text-align: center;
-    background-image: linear-gradient(to right, #ff8b37, #ffc700);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    margin-top: 0px;
-  }
-  p {
-    color: white;
-    background: none;
-  }
-  
-  img {
-    max-width: 40px;
-  }
+  background-color: #03080e;
+  font-family: "Poppins", sans-serif;
+}
 
-  .gradient-button {
-    margin-top: 60px;
-    height: 60px;
-    width: 320px;
-    background: linear-gradient(#ffc700, #ff8b37);
-    border: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-    text-decoration: none;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  
-  .gradient-button:hover {
-    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
-  }
-  
-  .circle-container {
-    width: 195px;
-    height: 195px;
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(244, 244, 249, 0.1), rgba(244, 244, 249, 0.6));
-  }
+h1 {
+  text-align: center;
+  background-image: linear-gradient(to right, #ff8b37, #ffc700);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 0px;
+}
+p {
+  color: white;
+  background: none;
+}
 
-  .user-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background: none;
-  }
-  
-  form {
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    margin-top: 30px;
-  }
-  
-  .input-container {
-    position: relative;
-    margin-bottom: 10px;
-  }
-  
- 
+img {
+  max-width: 40px;
+}
+
+.gradient-button {
+  margin-top: 60px;
+  height: 60px;
+  width: 320px;
+  background: linear-gradient(#ffc700, #ff8b37);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+}
+
+.circle-container {
+  width: 195px;
+  height: 195px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    rgba(244, 244, 249, 0.1),
+    rgba(244, 244, 249, 0.6)
+  );
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: none;
+}
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin-top: 30px;
+}
+
 .input-group {
   display: flex;
   justify-content: space-between;
@@ -93,7 +90,11 @@ select {
   padding: 6px;
   border: none;
   border-radius: 15px;
-  background: linear-gradient(to right, rgba(244, 244, 249, 0.6), rgba(3, 8, 14, 0.6));
+  background: linear-gradient(
+    to right,
+    rgba(244, 244, 249, 0.6),
+    rgba(3, 8, 14, 0.6)
+  );
   color: white;
 }
 
@@ -103,7 +104,7 @@ label {
   top: 50%;
   transform: translateY(-50%);
   color: white;
-  pointer-events: none; 
+  pointer-events: none;
   transition: top 0.3s, font-size 0.3s, color 0.3s;
 }
 
@@ -116,6 +117,40 @@ select:not(:placeholder-shown) + label {
   color: #ccc;
 }
 
-body, input, select, button {
+body,
+input,
+select,
+button {
   color: white;
+}
+
+.input-group, .input-container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 20px;
+ 
+}
+
+::placeholder {
+  color: white;
+}
+
+.custom-input {
+  background: linear-gradient(to right, rgba(244, 244, 249, 0.6), rgba(3, 8, 14, 0.6));
+  width: 320px;
+  height: 60px;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box; 
+}
+
+.custom-input::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Invertir el color del icono a blanco */
+}
+
+.input-container {
+  margin-bottom: 20px;
 }
