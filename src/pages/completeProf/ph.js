@@ -13,7 +13,7 @@ class ProfileConfig extends HTMLElement {
               <head>
                   <link rel="stylesheet" type="text/css" href="./ph.css">
               </head>
-              <img src="../../imgs/left arrow.png">
+              <img onclick="window.location.href='../physicalactivity/physicalactivity.html';" src="../../imgs/left arrow.png" >
               <h1>Complete Your Profile</h1>
               <center>
                   <p>Complete your profile to enjoy a personalized experience</p>
