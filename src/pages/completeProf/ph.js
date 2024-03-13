@@ -46,13 +46,15 @@ class ProfileConfig extends HTMLElement {
 </div>
 
 <div class="input-container">
+<div class="input-group">
   <input type="number" id="altura" name="altura" required>
   <label for="altura">Height</label>
 </div>
 
-<div class="input-container">
+<div class="input-group">
   <input type="number" id="peso" name="peso" required>
-  <label for="peso">Weigth</label>
+  <label for="peso">Weight</label>
+</div>
 </div>
 </form>  
   </center>

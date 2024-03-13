@@ -74,51 +74,48 @@
     margin-bottom: 10px;
   }
   
-  input[type="text"],
-  input[type="number"],
-  select {
-    width: 320px;
-    height: 60px;
-    border: none;
-    border-radius: 15px;
-    background: linear-gradient(to right, rgba(244, 244, 249, 0.6), rgba(3, 8, 14, 0.6));
-    color: white;
-  }
-  
-  label {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    pointer-events: none; /* Evitar que el label sea clickeable */
-    transition: top 0.3s, font-size 0.3s, color 0.3s;
-  }
-  
-  input:focus + label,
-  select:focus + label,
-  input:not(:placeholder-shown) + label,
-  select:not(:placeholder-shown) + label {
-    top: 0;
-    font-size: 12px;
-    color: #ccc;
-  }
-  
-  button {
-    background-color: #ffc700;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ff8b37;
-  }
-  
-  /* Ajuste para que todos los textos sean blancos */
-  body, input, select, button {
-    color: white;
-  }
-  
+ 
+.input-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group input[type="number"] {
+  width: 145px;
+  height: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 320px;
+  height: 60px;
+  padding: 6px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to right, rgba(244, 244, 249, 0.6), rgba(3, 8, 14, 0.6));
+  color: white;
+}
+
+label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none; 
+  transition: top 0.3s, font-size 0.3s, color 0.3s;
+}
+
+input:focus + label,
+select:focus + label,
+input:not(:placeholder-shown) + label,
+select:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+body, input, select, button {
+  color: white;
+}
