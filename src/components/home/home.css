@@ -1,0 +1,221 @@
+/* Header */
+
+body {
+    background-color: #5c5c5c;
+    margin: 40px;
+  }
+  
+  .header-container {
+    display: flex; /* ... */
+    background-color: #2260a7;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+  }
+  
+  .time {
+    font-size: 16px; /* Adjust time font size */
+    color: #888; /* Lighter color for time */
+    margin-right: 20px; /* Add margin between time and greeting */
+  }
+  
+  .greeting {
+    font-size: 32px; /* ... */
+    color: white;
+    font-weight: bold;
+  }
+  
+  
+  /* Workout Progress */
+  
+  .workout-progress {
+    background-color: #fff; /* Set white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Increase margin below */
+    width: 300px;
+    height: 80px;
+    display: flex;
+    flex-direction: row; /* Divide las columnas de izquierda a derecha */
+    gap: 20px; /* Espacio entre las columnas */
+    flex: 1; /* Las columnas ocupan el mismo espacio disponible */
+  }
+  .contenedor {
+    width: 90px; /* Ancho del contenedor */
+    height: 90px; /* Altura del contenedor */
+    border-radius: 50%; /* Redondea el contenedor para que sea circular */
+    background-color: #eee; /* Color de fondo del contenedor */
+    display: flex; /* Permite centrar los elementos dentro del contenedor */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+  }
+
+  
+
+  /* Estilo para el texto de porcentaje */
+  .porcentaje {
+    font-size: 24px; /* Tamaño del texto de porcentaje */
+    font-weight: bold; /* Peso del texto de porcentaje */
+    color: #333; /* Color del texto de porcentaje */
+  }
+  .workout-progress h2 {
+    font-size: 24px; /* Increase title font size */
+    margin-bottom: 15px; /* Add margin below title */
+  }
+  
+  .progress-bar {
+    height: 10px; /* Increase progress bar height */
+    background-color: #e6e6e6; /* Light gray background */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .progress {
+    background-color: var(--colorButton1-start); /* Use your gradient color */
+    height: 100%; /* Fill the entire height of the progress bar */
+    width: 68%; /* Set progress width */
+    animation: progress-fill 1s ease-in-out forwards; /* Add animation */
+  }
+  
+  @keyframes progress-fill {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 68%;
+    }
+  }
+  
+  .progress-value {
+    position: absolute; /* Position the value inside the progress bar */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the value */
+    font-size: 18px; /* Increase value font size */
+    font-weight: bold; /* Make value text bold */
+    color: white; /* White text color */
+  }
+  
+  /* Activities */
+  .activo {
+    background-color: #ffd0008e;
+    border-radius: 10px; /* Rounded corners */
+    
+  }
+ /* Estilos para el contenedor */
+.contenidos {
+    width: 40xp;
+    margin:-30 auto;
+    background-color: #ffa600;
+    padding: 10px;
+    display: grid; /* Activa Grid Layout */
+    grid-template-columns: repeat(3, 1fr); /* Define 3 columnas con el mismo ancho */
+    gap: 10px; /* Espacio entre las columnas */
+    border-bottom: 10px solid transparent; /* Borde inferior invisible */
+  }
+  
+  /* Estilos para el título */
+  .titulo {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  /* Estilos para cada actividad */
+  .actividad1 {
+    background-color: #c26969;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: calc(100% - 40px); /* Ajusta el ancho en base al ancho del contenedor */
+    text-align: center; /* Centra el texto dentro de cada componente */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+  
+
+  .actividad2 {
+    background-color: #10637c;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: calc(100% - 40px); /* Ajusta el ancho en base al ancho del contenedor */
+    text-align: center; /* Centra el texto dentro de cada componente */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+  
+
+  .actividad3 {
+    background-color: #098a25;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: calc(100% - 40px); /* Ajusta el ancho en base al ancho del contenedor */
+    text-align: center; /* Centra el texto dentro de cada componente */
+    align-items: center; /* Alinea verticalmente el contenido */
+}
+  
+  
+  /* Estilos para el título de la actividad */
+  .titulo-actividad {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para los detalles de la actividad */
+  .detalles {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para la cantidad de repeticiones */
+  .cantidad {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el tiempo de la actividad */
+  .tiempo {
+    font-size: 16px;
+    color: #666;
+  }
+  
+ 
+  
+  /* Status */
+  
+  .status {
+    background-color: #fff; /* Set white background */
+    border-radius: 10px; /* Rounded corners for status container */
+    padding: 20px; /* Add padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    height: 110px;
+    
+  }  
+
+  
+  .bottom-navigation {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 310px;
+    background-color: #ffa600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+   margin-left: 40px;
+   margin-bottom: 20px;
+   border-radius: 10px; /* Rounded corners */
+  }
+  
+  .bottom-navigation-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+  }
