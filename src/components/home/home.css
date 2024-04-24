@@ -114,7 +114,7 @@ body {
     gap: 10px; /* Espacio entre las columnas */
     border-bottom: 10px solid transparent; /* Borde inferior invisible */
   }
-  
+  /*
   /* Estilos para el título */
   .titulo {
     text-align: center;
