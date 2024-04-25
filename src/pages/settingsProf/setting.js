@@ -27,6 +27,48 @@ class SettingProfile extends HTMLElement {
     </div>
 </div>
 
+<h2>Settings</h2>
+<div class="container">
+<div class="photo-icon">
+    <img src="../../imgs/tp.png" class="photo-icon">
+</div>
+<div class="info-2">
+    <h3>Training preferences</h3>
+    <p>Personalize your worko...</p>
+</div>
+</div>
+
+<div class="container">
+<div class="photo-icon">
+    <img src="../../imgs/fg.png" class="photo-icon">
+</div>
+<div class="info-2">
+    <h3>Fitness Goal</h3>
+    <p>Set and update your...</p>
+</div>
+</div>
+
+<div class="container">
+<div class="photo-icon">
+    <img src="../../imgs/notification.png" class="photo-icon">
+</div>
+<div class="info-2">
+    <h3>Notifications</h3>
+    <p>Configure your notif...</p>
+</div>
+</div>
+
+<div class="container">
+<div class="photo-icon">
+    <img src="../../imgs/leng.png" class="photo-icon">
+</div>
+<div class="info-2">
+    <h3>Lenguaje</h3>
+    <p>Change your leng...</p>
+</div>
+</div>
+
+<button class="gradient-button">Log out</button>
              `;
   }
 }
