@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       if (response.ok) {
-        // Almacena el nombre de usuario en localStorage después del registro exitoso
+        // Guardar el nombre de usuario en el Local Storage
         localStorage.setItem('username', username);
-        window.location.href = '/pages/login/login.html'; // Redirecciona al usuario a la página de inicio de sesión después de registrarse
+        // Redirecciona al usuario a la página de inicio de sesión después de registrarse
+        window.location.href = '/pages/login/login.html'; 
       } else {
         const errorMessage = await response.text();
         alert(errorMessage); // Muestra un mensaje de error si el nombre de usuario ya está en uso
