@@ -24,21 +24,21 @@
     </div>
 
 
-    <form action="/login" method="POST" id="forum">
-      <input type="text" id="userName" name="username" placeholder="email"><br>
+    <form action="/login" method="POST" id="login-form"> <!-- Corregido el ID del formulario -->
+      <input type="text" id="username" name="username" placeholder="email"><br> <!-- Corregido el ID del campo de nombre de usuario -->
       <input type="password" id="password" name="password" placeholder="password"><br>
       
       <div class="toggle-switch-container">
-        <p>Remember me</p>
-        <div class="toggle-switch">
-          <input type="checkbox" id="toggle" class="toggle-input">
-          <label for="toggle" class="toggle-label"></label>
-        </div>
+          <p>Remember me</p>
+          <div class="toggle-switch">
+              <input type="checkbox" id="toggle" class="toggle-input">
+              <label for="toggle" class="toggle-label"></label>
+          </div>
       </div>
-
-
+  
       <input type="submit" value="Log In">
-    </form>
+  </form>
+
     <div id="noPass">
       <a href="#">
         <p>Forgot password?</p>
