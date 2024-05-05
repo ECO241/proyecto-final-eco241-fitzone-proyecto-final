@@ -85,7 +85,7 @@ a:hover {
 @media only screen and (max-width: 600px) {
 
     body {
-        background-image: url('/src/img/Login.jpg');
+        background-image: url('/src/img/background-image/Login.jpg');
         background-size: cover;
         background-repeat: no-repeat;
     }

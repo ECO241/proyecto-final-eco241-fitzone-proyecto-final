@@ -87,7 +87,7 @@ a:hover {
 @media only screen and (max-width: 600px) {
 
     body {
-        background-image: url('/src/img/Sign\ Up.png');
+        background-image: url('/src/img/background-image/Sign\ Up.png');
         background-size: cover;
         background-repeat: no-repeat;
     }

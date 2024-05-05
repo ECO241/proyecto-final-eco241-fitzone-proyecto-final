@@ -68,7 +68,7 @@ label {
 @media only screen and (max-width: 600px) {
 
     body {
-        background-image: url('/src/img/welcome.png');
+        background-image: url('/src/img/background-image/welcome.png');
         background-size: cover;
         background-repeat: no-repeat;
     }

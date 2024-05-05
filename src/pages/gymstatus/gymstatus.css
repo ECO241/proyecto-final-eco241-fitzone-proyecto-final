@@ -1,0 +1,342 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #03080E;
+    padding: 20px;
+}
+
+p {
+    color: #FAFAFA;
+}
+
+h1 {
+    text-align: left;
+    background-image: linear-gradient(to right, #FF8B37, #FFC700);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    text-align:left;
+    color: #FAFAFA;
+    font-size: medium;
+    font-weight: bold;
+}
+
+h3 {
+    text-align:left;
+    color: #FAFAFA;
+    font-size: small;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.322);
+    backdrop-filter: blur(10px);
+    color: #FAFAFA;
+    width: calc(100% - 20px);
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  
+  .search-container i {
+    margin-right: 10px;
+  }
+  
+  #search-bar {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #FAFAFA;
+    width: calc(100% - 20px);
+    padding: 15px 15px;
+    box-sizing: border-box;
+    outline: none;
+  }  
+
+  #search-bar::placeholder {
+  color:#FAFAFA;
+  opacity: 0.7;
+  text-align: left;
+}
+
+.card-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.322);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  
+  .card-left {
+    margin-left: 15px;
+  }
+  
+  .card-right {
+    flex-grow: 1;
+  }
+  
+  .card-image {
+    width: 90px;
+    height: 90px;
+    margin: 0px;
+  }
+  
+  .card-title {
+    margin: 5px; 
+    font-size: 1.1em;
+  }
+  
+  .card-description {
+    margin: 5px;
+    font-size: 0.9em; 
+  }
+  
+  .card-details {
+    font-size: 0.9em; 
+    color: #666;
+  }
+  
+  .available-machines {
+    width: 30%;
+    margin: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    background-color: #49CB65;
+    border-radius: 5px; 
+    padding: 5px;
+  }
+  
+  .location {
+    display: flex;
+    align-items: center; 
+    margin: 5px;
+  }
+  
+  .location i {
+    font-size: 16px; 
+    margin-right: 5px;
+  }
+
+/*section machine-types*/
+
+.machine-types {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .card-button-1, .card-button-2, .card-button-3, .card-button-4 {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-button-1 {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #DB4343;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+
+  .card-button-2 {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #86BFD8;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  .card-button-3 {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #49CB65;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+
+  .card-button-4 {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #FFDE6A;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+  }
+  
+  .card-button:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-img {
+    width: 100%;
+  }
+  
+  .card-label {
+    margin-left: 10px;
+    color: #FAFAFA;
+    font-size: 1.1em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: large;
+    }
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        border: none;
+        border-radius: 10px;
+        box-sizing: border-box;
+        outline: none;
+      }
+      
+      .search-container i {
+        margin-right: 10px;
+      }
+
+      #search-bar::placeholder {
+        color:#FAFAFA;
+        /*opacity: 0.7;*/
+        text-align: left;
+        font-size: medium;
+      }
+
+      h2 {
+        font-size: large;
+      }
+
+    .card {
+        flex-direction: row;
+    }
+
+    .card-list {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .card-left {
+        margin-left: 0px;
+      }
+
+    .card-image {
+        width: 80px;
+        height: 80px;
+        margin: 0px;
+      }
+      
+      .card-title {
+        margin: 5px; 
+        font-size: x-large;
+      }
+      
+      .card-description {
+        margin: 5px;
+        font-size: 0.9em; 
+      }
+      
+      .card-details {
+        font-size: 0.9em; 
+        color: #666;
+      }
+      
+      .available-machines {
+        width: 60%;
+        margin: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px; 
+        background-color: #49CB65;
+        border-radius: 5px; 
+        padding: 5px;
+      }
+      
+      .location {
+        display: flex;
+        align-items: center; 
+        margin: 5px;
+      }
+      
+      .location i {
+        font-size: 16px; 
+        margin-right: 5px;
+      }
+
+    .search-container {
+        width: 100%;
+    }
+
+    #search-bar {
+        width: 100%;
+    }
+
+    .machine-types {
+        flex-direction: column;
+    }
+
+    .card-button-1,
+    .card-button-2,
+    .card-button-3,
+    .card-button-4 {
+        width: 100%;
+    }
+  }
