@@ -209,7 +209,17 @@ h3 {
     cursor: pointer;
     transition: box-shadow 0.3s;
   }
+
+  .button2-3-4 {
+    display: flex;
+    gap: 20px;
+  }
   
+  .button3-4 {
+    display: flex;
+    gap: 20px;
+  }
+
   .card-button:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
@@ -228,6 +238,7 @@ h3 {
     
     h1 {
         font-size: 2.2rem;
+        margin-top: 10px;
     }
 
     .description {
@@ -264,15 +275,18 @@ h3 {
 
     .card {
         flex-direction: row;
+        flex: 0 0 auto;
     }
 
     .card-list {
         list-style-type: none; 
         padding: 0;
-        margin: 0;
+        margin-right: 20px;
         display: flex;
         gap: 10px;
+        overflow-x: auto;
         flex-wrap: nowrap;
+        width: fit-content;
     }
 
     .card-left {
@@ -333,10 +347,35 @@ h3 {
         flex-direction: column;
     }
 
-    .card-button-1,
-    .card-button-2,
-    .card-button-3,
-    .card-button-4 {
-        width: 100%;
+    .card-button-1 {
+        width: 90%;
+        padding-top: 2px;
+        padding-bottom: 0px;
     }
+
+    .card-button-2 {
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    .card-button-3 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .card-button-4 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .button2-3-4{
+        display: flex;
+        gap: 15px;
+    }
+
+    .button3-4 {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+      }
   }
