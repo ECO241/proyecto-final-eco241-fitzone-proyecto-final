@@ -140,4 +140,3 @@ function createCardButton(imageSrc, altText) {
 
 // Ejecutar al cargar el contenido
 document.addEventListener("DOMContentLoaded", buildPage);
-

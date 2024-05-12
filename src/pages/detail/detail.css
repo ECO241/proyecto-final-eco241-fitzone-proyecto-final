@@ -1,0 +1,130 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #03080E;
+    padding: 20px;
+}
+
+p {
+    color: #FAFAFA;
+}
+
+h1 {
+    text-align: left;
+    background-image: linear-gradient(to right, #FF8B37, #FFC700);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+h2 {
+    text-align:left;
+    color: #FAFAFA;
+    font-size: medium;
+    font-weight: bold;
+}
+
+h3 {
+    text-align:left;
+    color: #FAFAFA;
+    font-size: small;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #FF8B37;
+    cursor: pointer;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .tag-time {
+    border: 1px solid #FFDE6A;
+    border-radius: 5px;
+    color: #FAFAFA;
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+  
+  .tag-intensity {
+    border: 1px solid #DB4343;
+    border-radius: 5px;
+    color: #FAFAFA;
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+
+  .divider {
+        border: none;
+        height: 1px;
+        background: linear-gradient(to right, #FF8B37, #FFC700);
+        width: 100%;
+  }
+
+  .info-card {
+    padding: 20px;
+    background: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.steps-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.steps-list li {
+    font-size: 1em;
+    color: #FAFAFA;
+    border: 1px solid #FF8B37;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.322);
+}
+
+button {
+    align-items: center;
+    padding: 10px;
+    margin: 20px;
+    color: #FAFAFA;
+    border-radius: 5px;
+}
+
+.custom-save-button {
+    background: rgba(255, 255, 255, 0.322);
+    border: none;
+}
+
+.custom-start-button {
+    background: linear-gradient(to right, #FF8B37, #FFC700);
+    border: none;
+    font-weight: bold;
+}
+
+.custom-save-button,
+.custom-start-button {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.custom-save-button:hover,
+.custom-start-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-save-button:active,
+.custom-start-button:active {
+    transform: translateY(0px);
+    box-shadow: none;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
