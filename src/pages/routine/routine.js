@@ -32,7 +32,28 @@ class RoutineScreen extends HTMLElement {
 </div>
 
 
+<div class= "bottom-card">
+<h4>Popular routines</h4>
 
+<div class="routine-card">
+<div class="info">
+<h4>Full-Body Circuit</h4>
+<p>This routine targets all major muscle groups in...</p>
+<button class="time">45-60 minutes</button>
+<button class="level">Intermediate</button>
+</div>
+</div>
+</div>
+
+
+<div class="container">
+<img src="../../imgs/home.png" class="icon-2">
+<img src="../../imgs/search.png" class="icon-2">
+<img src="../../imgs/qr.png" class="icon-2">
+<img src="../../imgs/trophy.png" class="icon-2">
+<img src="../../imgs/userIconBar.png" class="icon-2">
+
+</div>
                    `;
   }
 }

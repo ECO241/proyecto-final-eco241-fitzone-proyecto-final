@@ -1,6 +1,7 @@
 * {
   background-color: #03080e;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .header-1 {
@@ -75,21 +76,93 @@ h2 {
 }
 
 .image-container {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    gap: 10px;
-    padding: 10px;
-    margin: 20px 0;
-    margin-left: 25px;
-  }
-  
-  .big-img {
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    max-width: 230px;
-    height: auto;
-  }
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  margin-left: 25px;
+}
 
+.big-img {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  max-width: 230px;
+  height: auto;
+}
+
+.routine-card {
+  width: 340px;
+  height: 175px;
+  background: linear-gradient(
+    to right,
+    rgba(244, 244, 249, 0.6),
+    rgba(3, 8, 14, 0.6)
+  );
+  border-radius: 15px;
+}
+
+.info {
+  background: none;
+  margin-left: 20px;
+}
+h4 {
+  color: white;
+  font-size: small;
+  background: none;
+  margin-top: 10px;
+}
+
+.medium-img {
+  max-width: 160px;
+  background-color: none;
+}
+
+.time {
+  color: white;
+  background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  border: solid 2px #ff8b37;
+  border-radius: 5px;
+  height: 25px;
+  width: 130px;
+}
+
+.level {
+  background-color: #ff8b37;
+  color: white;
+  border-radius: 5px;
+  height: 25px;
+  width: 130px;
+  border: none;
+}
+
+.bottom-card {
+    margin-left: 25px;
+}
+
+/*Barra*/
+
+.container {
+    background: linear-gradient(#ffc700, #ff8b37);
+    padding: 10px; 
+    border-radius: 10px;
+    width: 345px;
+    height: 50px;
+    align-items: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 25px;
+    margin-top: 90px;
+}
+
+.icon-2 {
+    margin-right: 15px; 
+    margin-left: 15px;
+    width: 40px; 
+    height: 40px;
+    background: none;
+}
