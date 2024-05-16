@@ -26,8 +26,9 @@ class RoutineScreen extends HTMLElement {
 <h2>Routines for you</h2>
 
 <div class="image-container">
-    <img src="../../imgs/component.png" class="big-img">
-    <img src="../../imgs/comp3.png" class="big-img">
+<img src="../../imgs/component.png" class="big-img">
+<img src="../../imgs/comp3.png" class="big-img">
+<img src="../../imgs/component.png" class="big-img">
 </div>
 
 
