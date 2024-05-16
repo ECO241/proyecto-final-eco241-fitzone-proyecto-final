@@ -1,60 +1,78 @@
 class RoutineScreen extends HTMLElement {
   constructor() {
-    super();
-    this.attachShadow({ mode: "open" });
+      super();
+      this.attachShadow({ mode: "open" });
+      this.routines = [
+          {
+              title: 'Full-Body Circuit',
+              description: 'This routine targets all major muscle groups in...',
+              time: '45-60 minutes',
+              level: 'Intermediate'
+          },
+          // Puedes agregar más rutinas aquí
+      ];
+      this.icons = [
+          { src: '../../imgs/home.png', alt: 'Home Icon' },
+          { src: '../../imgs/search.png', alt: 'Search Icon' },
+          { src: '../../imgs/qr.png', alt: 'QR Icon' },
+          { src: '../../imgs/trophy.png', alt: 'Trophy Icon' },
+          { src: '../../imgs/userIconBar.png', alt: 'User Icon' }
+      ];
   }
 
   connectedCallback() {
-    this.render();
+      this.render();
+  }
+
+  createElement(tag, attributes = {}, children = []) {
+      const element = document.createElement(tag);
+      Object.keys(attributes).forEach(key => element.setAttribute(key, attributes[key]));
+      children.forEach(child => element.appendChild(child));
+      return element;
   }
 
   render() {
-    this.shadowRoot.innerHTML = `
-                <head>
-                    <link rel="stylesheet" type="text/css" href="./routine.css">
-                </head>
-<div class="header-1">
-               <h1>Routines</h1>
-               <img src="../../imgs/bell.png" class="icon">
-               </div>
+      const styleLink = this.createElement('link', { rel: 'stylesheet', type: 'text/css', href: './routine.css' });
+      const header = this.createElement('div', { class: 'header-1' }, [
+          this.createElement('h1', {}, [document.createTextNode('Routines')]),
+          this.createElement('img', { src: '../../imgs/bell.png', class: 'icon' })
+      ]);
 
-               <div class="search-bar">
-                   <img src="../../imgs/search.png" class="icon">
-    <input type="text" class="text" placeholder="Search...">
-</div>
+      const searchBar = this.createElement('div', { class: 'search-bar' }, [
+          this.createElement('img', { src: '../../imgs/search.png', class: 'icon' }),
+          this.createElement('input', { type: 'text', class: 'text', placeholder: 'Search...' })
+      ]);
 
-<h2>Routines for you</h2>
+      const routinesHeader = this.createElement('h2', {}, [document.createTextNode('Routines for you')]);
 
-<div class="image-container">
-<img src="../../imgs/component.png" class="big-img">
-<img src="../../imgs/comp3.png" class="big-img">
-<img src="../../imgs/component.png" class="big-img">
-</div>
+      const imageContainer = this.createElement('div', { class: 'image-container' }, [
+          this.createElement('img', { src: '../../imgs/component.png', class: 'big-img' }),
+          this.createElement('img', { src: '../../imgs/comp3.png', class: 'big-img' }),
+          this.createElement('img', { src: '../../imgs/component.png', class: 'big-img' })
+      ]);
 
+      const bottomCard = this.createElement('div', { class: 'bottom-card' }, [
+          this.createElement('h4', {}, [document.createTextNode('Popular routines')]),
+          ...this.routines.map(routine => this.createRoutineCard(routine))
+      ]);
 
-<div class= "bottom-card">
-<h4>Popular routines</h4>
+      const iconContainer = this.createElement('div', { class: 'container' }, 
+          this.icons.map(icon => this.createElement('img', { src: icon.src, class: 'icon-2', alt: icon.alt }))
+      );
 
-<div class="routine-card">
-<div class="info">
-<h4>Full-Body Circuit</h4>
-<p>This routine targets all major muscle groups in...</p>
-<button class="time">45-60 minutes</button>
-<button class="level">Intermediate</button>
-</div>
-</div>
-</div>
+      this.shadowRoot.innerHTML = '';
+      this.shadowRoot.append(styleLink, header, searchBar, routinesHeader, imageContainer, bottomCard, iconContainer);
+  }
 
-
-<div class="container">
-<img src="../../imgs/home.png" class="icon-2">
-<img src="../../imgs/search.png" class="icon-2">
-<img src="../../imgs/qr.png" class="icon-2">
-<img src="../../imgs/trophy.png" class="icon-2">
-<img src="../../imgs/userIconBar.png" class="icon-2">
-
-</div>
-                   `;
+  createRoutineCard(routine) {
+      return this.createElement('div', { class: 'routine-card' }, [
+          this.createElement('div', { class: 'info' }, [
+              this.createElement('h4', {}, [document.createTextNode(routine.title)]),
+              this.createElement('p', {}, [document.createTextNode(routine.description)]),
+              this.createElement('button', { class: 'time' }, [document.createTextNode(routine.time)]),
+              this.createElement('button', { class: 'level' }, [document.createTextNode(routine.level)])
+          ])
+      ]);
   }
 }
 
