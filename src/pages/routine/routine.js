@@ -9,7 +9,6 @@ class RoutineScreen extends HTMLElement {
               time: '45-60 minutes',
               level: 'Intermediate'
           },
-          // Puedes agregar más rutinas aquí
       ];
       this.icons = [
           { src: '../../imgs/home.png', alt: 'Home Icon' },
