@@ -11,7 +11,7 @@ export default class UserIcon extends HTMLElement {
 
     handleClick() {
         // Cambiar ruta.
-        window.location.href = "ruta_de_la_pagina";
+        window.location.href = "../../../pages/profile/profile.html";
     }
   
     render() {
@@ -20,20 +20,15 @@ export default class UserIcon extends HTMLElement {
                 :host {
                     display: flex; 
                     justify-content: flex-start; 
-                    margin-left: 15px;
-                    margin-top: 50px;
                     cursor: pointer;
+                    position: fixed;
+                    left: 15px;
                     z-index:5;
-                    transition: transform 0.3s ease-in-out;
-                }
-                
-                :host(:hover) {
-                    transform: scale(1.1);
                 }
 
                 img {
-                    width: 63px;
-                    height: 63px;
+                    width: 60px;
+                    height: 60px;
                 }
             </style>
 

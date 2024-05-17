@@ -1,6 +1,9 @@
 import BarNavigation from "../bar/bar.js";
 import UserIcon from "./userIcon/userIcon.js";
 import GreetingParagraph from "./greetingParagraph/greetingParagraph.js";
+import WorkoutProgress from "./workoutProgress/workoutProgress.js";
+import WarmUpExercise from "./warmupExercise/warmupExercise.js";
+import OverallStatus from "./overallStatus/overallStatus.js";
 
 class AppHome extends HTMLElement {
   constructor() {
@@ -9,33 +12,106 @@ class AppHome extends HTMLElement {
     const appContainer = document.createElement("div");
     appContainer.classList.add("app-container");
 
-    // Agregar el componente GreetingParagraph
+    // Agregar el componente GreetingParagraph y UserIcon dentro de un contenedor flexible
+    const headerContainer = document.createElement("div");
+    headerContainer.classList.add("header-container");
     const greetingParagraph = new GreetingParagraph();
-    appContainer.appendChild(greetingParagraph);
-
-    // Crear e insertar el componente UserIcon
+    headerContainer.appendChild(greetingParagraph);
     const userIcon = new UserIcon();
-    appContainer.appendChild(userIcon);
+    headerContainer.appendChild(userIcon);
+    appContainer.appendChild(headerContainer);
 
-    // Crear e insertar el componente BarNavigation
+    // Crear e insertar el mensaje debajo del UserIcon:
+    const fitnessMessage = document.createElement("p");
+    fitnessMessage.classList.add("fitness-message");
+    fitnessMessage.textContent = "Let's get fit!";
+    appContainer.appendChild(fitnessMessage);
+
+    // Crear e insertar el componente WorkoutProgress:
+    const workoutProgress = document.createElement("workout-progress");
+    appContainer.appendChild(workoutProgress);
+
+    // Crear e insertar el componente WarmUpExercise:
+    const warmUpExercise = document.createElement("warm-up-exercise");
+    appContainer.appendChild(warmUpExercise); // Insertar el WarmUpExercise antes del OverallStatus
+
+    // Crear e insertar el componente OverallStatus:
+    const overallStatus = document.createElement("overall-status");
+    appContainer.appendChild(overallStatus); // Insertar el OverallStatus después del WarmUpExercise
+
+    // Crear e insertar el componente BarNavigation:
     const barNavigation = new BarNavigation();
-    appContainer.appendChild(barNavigation);
+    shadow.appendChild(barNavigation); // Mover la barra de navegación al shadow root directamente
 
     shadow.appendChild(appContainer);
 
     const style = document.createElement("style");
     style.textContent = `
       .app-container {
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 430px; /* Asegurar que el contenido no se desborde */
+        padding: 10px;
+        box-sizing: border-box;
       }
-      
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
       .app-container h1 {
         font-size: 24px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
-      
+
       .app-container p {
         font-size: 18px;
+        margin: 0;
+      }
+
+      .fitness-message {
+        font-size: 16px;
+        color: #555;
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      workout-progress, warm-up-exercise, overall-status {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 428px) {
+        .app-container {
+          padding: 10px;
+        }
+
+        workout-progress, warm-up-exercise, overall-status {
+          margin-top: 15px;
+          
+        }
+
+        .app-container h1 {
+          font-size: 18px;
+        }
+
+        .app-container p, .fitness-message {
+          font-size: 14px;
+        }
+
+        .fitness-message {
+          margin: 5px 0;
+        }
+      }
+
+      bar-navigation {
+        display: flex;
+        width: 100%;
       }
     `;
     shadow.appendChild(style);

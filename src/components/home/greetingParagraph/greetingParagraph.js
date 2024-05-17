@@ -28,23 +28,29 @@ export default class GreetingParagraph extends HTMLElement {
         this.shadowRoot.innerHTML = `
             <style>
                 .greeting-container {
-                    font-size: 20px;
+                    font-size: 35px;
                     text-align: left;
-                    position: absolute;
-                    top: 90px;
+                    position: fixed;
                     left: 120px;
                     z-index: 1;
                 }
                 .saludo {
                     font-weight: bold;
                     margin-right: 10px;
+                    background: linear-gradient(#ffc700, #ff8b37);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
                 .usuario {
-                    color: white;
+                    font-weight: bold;
+                    background: linear-gradient(#ffc700, #ff8b37);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             </style>
             <div class="greeting-container">
-                <span class="saludo"></span>
+            <div><span class="saludo"></span></div>
+
                 <span class="usuario"></span>
             </div>
         `;

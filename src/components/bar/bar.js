@@ -16,20 +16,21 @@ export default class BarNavigation extends HTMLElement {
                   padding: 10px; 
                   border-radius: 10px;
                   width: 345px;
-                  height: 50px;
+                  height: 40px;
                   display: flex; 
-                  justify-content: center; 
-                  align-items: center; 
-                  margin-left: 12px;
-                  margin-top: 700px;
-                  z-index: 10;
+                  justify-content: space-around;
+                  align-items: center;
+                  position: fixed;
+                  bottom: 30px;
+                  margin-left: 15px;
+                  z-index: 1000;
               }
 
               .icon {
                   margin-right: 15px; 
                   margin-left: 15px;
-                  width: 40px; 
-                  height: 40px;
+                  width: 35px; 
+                  height: 35px;
               }
           </style>
 
