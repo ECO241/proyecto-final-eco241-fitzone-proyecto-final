@@ -1,51 +1,65 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = 3000;
+const { createClient } = require('@supabase/supabase-js');
 
-// Middleware para manejar datos de formulario
+const supabaseUrl = 'https://lkwfiqgbsyiypzkvyhai.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxrd2ZpcWdic3lpeXB6a3Z5aGFpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcxNTkxMDE1NywiZXhwIjoyMDMxNDg2MTU3fQ.6MySod30WrN76FPMmITxa1LBsg99cbGT23kkzbvn-KI';
+const supabase = createClient(supabaseUrl, supabaseKey);
+const PORT = process.env.PORT || 3000;
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// Configuración para servir archivos estáticos
 app.use(express.static('src'));
 
-// Usuarios registrados (simulación, puedes cambiar esto para usar una base de datos)
-let users = [];
-
-// Endpoint para manejar el registro de usuarios
-app.post('/register', (req, res) => {
+app.post('/register', async (req, res) => {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).send('Debes proporcionar un nombre de usuario y una contraseña.');
   }
 
-  if (users.some(user => user.username === username)) {
-    return res.status(400).send('El nombre de usuario ya está en uso.');
+  console.log('Supabase:', supabase);
+  console.log('Antes de signIn');
+  const { session, error } = await supabase.auth.signIn({
+    email: username,
+    password: password,
+  });
+  console.log('Después de signIn');
+  
+  if (error) {
+    return res.status(400).send(error.message);
   }
 
-  users.push({ username, password });
-  console.log('Usuario registrado:', { username, password });
+  console.log('Usuario registrado:', user);
   res.redirect('/pages/login/login.html');
 });
 
-// Endpoint para manejar el inicio de sesión
-app.post('/login', (req, res) => {
+app.post('/login', async (req, res) => {
   const { username, password } = req.body;
-  const user = users.find(user => user.username === username && user.password === password);
-  if (!user) {
-    return res.status(401).send('Nombre de usuario o contraseña incorrectos.');
+
+  // Verificar si supabase.auth está inicializado correctamente
+  if (!supabase.auth) {
+    return res.status(500).send('Error en la inicialización de Supabase');
   }
-  console.log('Inicio de sesión exitoso:', user);
+
+  const { session, error } = await supabase.auth.signIn({
+    email: username,
+    password: password,
+  });
+
+  if (error) {
+    return res.status(401).send(error.message);
+  }
+
+  console.log('Inicio de sesión exitoso:', session.user);
+  
   res.redirect('/pages/home/home.html');
 });
 
-// Manejo de la solicitud GET para la ruta raíz
 app.get('/', (req, res) => {
-  res.redirect('/pages/login/login.html');
+  res.redirect('/pages/home/home.html');
 });
 
-// Inicia el servidor
 app.listen(PORT, () => {
   console.log(`Servidor en funcionamiento en http://localhost:${PORT}`);
 });
