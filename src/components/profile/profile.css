@@ -1,0 +1,113 @@
+/* Estilos base */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #03080E;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #FF8B37, #FFC700);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.profile-picture {
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background-color: #FAFAFA;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #FAFAFA;
+}
+
+.circles-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.small-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF8B37;
+    margin: 0 10px;
+}
+
+.large-rectangle {
+    width: 338px;
+    height: 258px;
+    background-color: #FF8B37;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.large-rectangle p {
+    color: #FAFAFA;
+    font-size: 1.5rem;
+}
+
+.inner-rectangles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.inner-rectangle {
+    width: calc(50% - 10px);
+    height: 100px;
+    background-color: #A9A9A9;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url('/src/img/background-image/Sign\ Up.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .small-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .large-rectangle {
+        width: 90%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .large-rectangle p {
+        font-size: 1.2rem;
+    }
+
+    .inner-rectangles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inner-rectangle {
+        width: 100%;
+        height: 80px;
+        margin-top: 10px;
+    }
+}
