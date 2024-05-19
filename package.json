@@ -1,18 +1,23 @@
 {
-  "name": "entregafinal",
+  "name": "fitzone",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A fitness zone application",
+  "main": "src/server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server/app.js",
+    "dev": "nodemon src/server/app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemo": "^1.0.0"
+  "engines": {
+    "node": ">=14.0.0"
   },
   "dependencies": {
-    "express": "^4.18.3"
-  }
+    "express": "^4.17.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "author": "Your Name",
+  "license": "ISC"
 }
