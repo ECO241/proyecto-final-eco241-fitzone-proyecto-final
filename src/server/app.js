@@ -3,16 +3,15 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware para manejar datos de formulario
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Definir la ruta de archivos estáticos
+
 const staticPath = path.join(__dirname, '../../src');
 app.use(express.static(staticPath));
 app.use('/pages', express.static(path.join(staticPath, 'pages')));
 
-// Usuarios registrados (simulación, puedes cambiar esto para usar una base de datos)
+// Usuarios registrados
 let users = [];
 
 // Endpoint para manejar el registro de usuarios
