@@ -34,11 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const innerRectangles = document.createElement('div');
     innerRectangles.className = 'inner-rectangles';
 
-    for (let i = 0; i < 2; i++) {
-        const innerRectangle = document.createElement('div');
-        innerRectangle.className = 'inner-rectangle';
-        innerRectangles.appendChild(innerRectangle);
-    }
+    const innerRectangle1 = document.createElement('div');
+    innerRectangle1.className = 'inner-rectangle';
+    innerRectangle1.innerHTML = `
+        <p>Strength</p>
+        <p>60 kg</p>
+        <p>Bench press</p>
+        <p>80 kg</p>
+        <p>Squats</p>
+        <p>100 kg</p>
+        <p>Deadlift</p>
+    `;
+    innerRectangles.appendChild(innerRectangle1);
+
+    const innerRectangle2 = document.createElement('div');
+    innerRectangle2.className = 'inner-rectangle';
+    innerRectangles.appendChild(innerRectangle2);
 
     largeRectangle.appendChild(innerRectangles);
     body.appendChild(largeRectangle);
