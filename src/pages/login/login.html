@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../components/login/login.css">
+  <script src="../../components/login/login.js" defer></script>
+  <title>Iniciar sesión</title>
+</head>
+<body>
+  <div id="backgroundImg">
+    <img src="../../imgs/loginImg.jpg" id="loginImg">
+    <img src="../../imgs/fitzoneLogo.png" id="logo">
+    <img src="../../imgs/backroundCover.png" id="backgroundCover">
+  </div>
+
+  <div id="forumContainer">
+    <div>
+      <a href="#" id="backBtn">
+        <img src="../../imgs/icons/leftArrow.png" alt="Back">
+      </a>    
+      <h1>Welcome<br> Back</h1>
+      <h2>Let's Get Fit Together!</h2>
+    </div>
+
+    <form id="login-form">
+      <label for="username">Email:</label>
+      <input type="text" id="username" name="username" placeholder="Email" autocomplete="email" required><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required><br>
+      
+      <div class="toggle-switch-container">
+        <p>Remember me</p>
+        <div class="toggle-switch">
+          <input type="checkbox" id="toggle" class="toggle-input">
+          <label for="toggle" class="toggle-label"></label>
+        </div>
+      </div>
+  
+      <input type="submit" value="Log In">
+    </form>
+
+    <div id="noPass">
+      <a href="#">
+        <p>Forgot password?</p>
+      </a>
+    </div>
+    <div id="noAccount"> 
+      <p>Don’t have an account? <a href="/pages/register/register.html">Sign Up</a></p>
+    </div>
+  </div>
+</body>
+</html>

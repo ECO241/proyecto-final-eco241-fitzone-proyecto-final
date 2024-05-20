@@ -1,0 +1,300 @@
+  :root {
+      --colorButton1-start: #FF8B37;
+      --colorButton1-end: #FFC700;
+      --colorForum: #585A60;
+      --backgroundColorFitzone: #02070C;
+      --fitzoneOrange: #FF8B37;
+      --fitzoneYellow: #FFC700;
+    }
+    
+    @font-face {
+      font-family: 'Poppins';
+      src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    body {
+      font-family: 'Poppins';
+      background-color: var(--backgroundColorFitzone);
+      color: white;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      background-image: linear-gradient(to right, var(--colorButton1-start), var(--colorButton1-end));
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      left: 10%;
+      position: fixed;
+      margin-left: 20px;
+      top: 25%;
+      text-align: left;
+      font-size: 2.2rem;
+    }
+    
+    h2 {
+      top: 50%;
+      left: 10%;
+      position: fixed;
+      text-align: left;
+      font-size: medium;
+      font-weight: lighter;
+    }
+    
+    h3 {
+      text-align: center;
+      color: #FAFAFA;
+    }
+    
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background: none;
+      padding: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="password"] {
+      background-color: var(--colorForum);
+      backdrop-filter: blur(10px);
+      color: #FAFAFA;
+      width: calc(100% - 20px);
+      padding: 15px 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
+      box-sizing: border-box;
+      outline: none;
+    }
+
+    input[type="password"] {
+      margin-bottom: 5px !important;
+    }
+    
+    input[type="text"]::placeholder,
+    input[type="password"]::placeholder {
+      color: #FAFAFA;
+      text-align: left;
+    }
+    
+    input[type="submit"] {
+      background-image: linear-gradient(to right, #FF8B37, #FFC700);
+      color: white;
+      width: calc(100% - 20px);
+      padding: 15px 60px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: "Poppins", sans-serif;
+      font-weight: 800;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease;
+    }
+    
+    p {
+      font-size: 0.9rem;
+      color: #FAFAFA;
+    }
+    
+    a {
+      color: #FF8B37;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+
+    #backBtn img {
+      position: fixed;
+      width: 35px;
+      height: 35px;
+      left: 10%;
+      top: 35%
+  }
+    
+    #backgroundImg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; 
+    }
+    
+    #loginImg {
+      width: 430px;
+      height: 405px;
+      object-fit: cover; 
+    }
+    
+    #logo {
+      position: absolute;
+      top: 95px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    
+    #backgroundCover {
+      position: fixed;
+      top: 13%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 3;
+    }
+    
+    #forumContainer {
+      position: relative;
+      z-index: 4;
+    }
+
+    #forum {
+      position: fixed;
+      top: 70%;
+    }
+
+
+
+    .toggle-switch {
+      align-items: center;
+      display: inline-block;
+      position: fixed;
+      left: 50%;
+      width: 60px;
+      height: 34px;
+    }
+
+  .toggle-switch p{
+      position: fixed;
+      left: 10%
+  }
+    
+    .toggle-input {
+      display: none;
+    }
+    
+    .toggle-label {
+      display: block;
+      width: 38px;
+      height: 20px;
+      border-radius: 17px;
+      background-color: #ccc;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: background-color 0.3s;
+    }
+    
+    .toggle-input:checked + .toggle-label {
+      background-color: var(--colorButton1-start); /* Cambia el color del switch cuando está activado */
+    }
+    
+    .toggle-label::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 4px;
+      transition: left 0.3s;
+    }
+    
+    .toggle-input:checked + .toggle-label::before {
+      left: calc(100% - 20px); /* Mueve el switch a la posición de encendido */
+    }
+    
+
+    .toggle-switch-container {
+      display: flex; 
+      margin-bottom: 20px; 
+      align-items: center;
+    }
+    
+    .toggle-switch {
+      position: relative;
+      margin-top: 5%;
+    }
+    
+    .toggle-switch p {
+      margin: 0;
+    }
+    
+  #noPass {
+      position: fixed;
+      top: 85%;
+      left: 35%;
+      
+  }
+
+  #noAccount {
+      position: fixed;
+      top: 90%;
+      left: 25%;
+      
+  }
+
+
+
+
+
+
+
+  /* Media query para dispositivos móviles */
+  @media only screen and (max-width: 600px) {
+
+      body {
+          background-image: url('/src/img/Login.jpg');
+          background-size: cover;
+          background-repeat: no-repeat;
+      }
+
+      h1 {
+          left: 10%;
+          position: fixed;
+          margin-left: 20px;
+          top: 40%;
+          text-align: left;
+          font-size: 2.2rem;
+      }
+
+      h3 {
+          font-size: 1rem;
+          margin-left: 20px;
+          top: 47%;
+          position: fixed;
+          text-align: left;
+      }
+
+      form {
+          position: fixed;
+          top: 65%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          max-width: 400px;
+      }
+
+
+      input[type="text"],
+      input[type="password"],
+      input[type="submit"] {
+          font-size: 1.25rem;
+      }
+
+
+  }
