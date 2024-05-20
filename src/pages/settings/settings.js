@@ -94,6 +94,27 @@ function createElement(type, props = {}, ...children) {
       createElement("li", {}, createElement("button", { onclick: openSecuritySettings }, createElement("i", { className: "fas fa-lock" }), createElement("h3", {}, "Security"), createElement("p", {}, "Manage your security settings"), createElement("i", { className: "fas fa-chevron-right" }))),
       createElement("li", {}, createElement("button", {}, createElement("i", { className: "fas fa-language" }), createElement("h3", {}, "Language"), createElement("select", { onchange: changeLanguage }, createElement("option", { value: "en" }, "English"), createElement("option", { value: "es" }, "Español"), createElement("option", { value: "fr" }, "Français")))),
     );
+
+    // Función para abrir la página de información personal
+function openPersonalInfo() {
+  window.location.href = '/pages/settingsProf/setting.html';
+}
+
+// Función para abrir la página de configuración de perfil
+function openProfileSettings() {
+  window.location.href = '/profile-settings.html';
+}
+
+// Función para abrir la página de preferencias
+function openPreferences() {
+  window.location.href = '/preferences.html';
+}
+
+// Función para abrir la página de configuración de seguridad
+function openSecuritySettings() {
+  window.location.href = '/security-settings.html';
+}
+
   
     // Botón de cerrar sesión
     const logoutButton = createElement("button", { className: "logout-button", onclick: logout }, "Log Out");

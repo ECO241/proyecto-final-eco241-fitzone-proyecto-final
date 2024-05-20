@@ -1,3 +1,5 @@
+import BarNavigation from "../../components/bar/bar.js";
+
 // Función para crear elementos HTML con propiedades y clases
 function createElement(type, props = {}, ...children) {
   const element = document.createElement(type);
@@ -32,38 +34,38 @@ function createMachineTypes() {
     createElement(
       "ul",
       { className: "machine-types" },
-      createElement("li", {}, 
+      createElement("li", {},
         createElement(
           "div",
           { className: "card-button-1" },
-          createElement("img", { src: "/src/img/machine-types/Cardio.png", alt: "Cardio", className: "card-img" })
+          createElement("img", { src: "/src/imgs/machine-types/Cardio.png", alt: "Cardio", className: "card-img" })
         )
       ),
       createElement(
         "div",
         { className: "button2-3-4" },
-        createElement("li", {}, 
+        createElement("li", {},
           createElement(
             "div",
             { className: "card-button-2" },
-            createElement("img", { src: "/src/img/machine-types/strength-machine.png", alt: "Strength", className: "card-img" })
+            createElement("img", { src: "/src/imgs/machine-types/strength-machine.png", alt: "Strength", className: "card-img" })
           )
         ),
         createElement(
           "div",
           { className: "button3-4" },
-          createElement("li", {}, 
+          createElement("li", {},
             createElement(
               "div",
               { className: "card-button-3" },
-              createElement("img", { src: "/src/img/machine-types/specific-body-machine.png", alt: "Flexibility", className: "card-img" })
+              createElement("img", { src: "/src/imgs/machine-types/specific-body-machine.png", alt: "Flexibility", className: "card-img" })
             )
           ),
-          createElement("li", {}, 
+          createElement("li", {},
             createElement(
               "div",
               { className: "card-button-4" },
-              createElement("img", { src: "/src/img/machine-types/Functional-machine.png", alt: "Functional", className: "card-img" })
+              createElement("img", { src: "/src/imgs/machine-types/Functional-machine.png", alt: "Functional", className: "card-img" })
             )
           )
         )
@@ -102,10 +104,12 @@ function buildPage() {
 
   const machineTypes = createMachineTypes(); // Implementar la sección "machine-types"
 
+  const barNavigation = new BarNavigation(); // Crear una instancia del componente BarNavigation
   document.body.appendChild(header);
   document.body.appendChild(searchContainer);
   document.body.appendChild(routineMachines);
   document.body.appendChild(machineTypes);
+  document.body.appendChild(barNavigation); // Agregar el componente BarNavigation al final del cuerpo del documento
 }
 
 // Crear una tarjeta para máquinas
@@ -126,15 +130,6 @@ function createMachineCard(imageSrc, title, description, available, location) {
         createElement("p", { className: "location" }, createElement("i", { className: "fas fa-location-dot" }), location)
       )
     )
-  );
-}
-
-// Crear un botón con imagen
-function createCardButton(imageSrc, altText) {
-  return createElement(
-    "div",
-    { className: `card-button-${altText}` },
-    createElement("img", { src: imageSrc, className: "card-img", alt: altText })
   );
 }
 

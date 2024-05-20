@@ -4,11 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const signUpButton = document.querySelector ('.button2');
   
     loginButton.addEventListener('click', () => {
-      window.location.href = '/src/pages/login/login.html'; // Redirigir a la página de Log In
+      window.location.href = '/pages/login/login.html'; // Redirigir a la página de Log In
     });
   
     signUpButton.addEventListener('click', () => {
-      window.location.href = '/src/pages/register/register.html'; // Redirigir a la página de Sign Up
+      window.location.href = '/pages/register/register.html'; // Redirigir a la página de Sign Up
     });
   });
   

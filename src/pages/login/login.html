@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iniciar sesión</title>
   <link rel="stylesheet" href="../../components/login/login.css">
   <script src="../../components/login/login.js" defer></script>
+  <title>Iniciar sesión</title>
 </head>
 <body>
   <div id="backgroundImg">
@@ -18,26 +18,28 @@
     <div>
       <a href="#" id="backBtn">
         <img src="../../imgs/icons/leftArrow.png" alt="Back">
-    </a>    
+      </a>    
       <h1>Welcome<br> Back</h1>
       <h2>Let's Get Fit Together!</h2>
     </div>
 
-
-    <form action="/login" method="POST" id="login-form"> <!-- Corregido el ID del formulario -->
-      <input type="text" id="username" name="username" placeholder="email"><br> <!-- Corregido el ID del campo de nombre de usuario -->
-      <input type="password" id="password" name="password" placeholder="password"><br>
+    <form id="login-form">
+      <label for="username">Email:</label>
+      <input type="text" id="username" name="username" placeholder="Email" autocomplete="email" required><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required><br>
       
       <div class="toggle-switch-container">
-          <p>Remember me</p>
-          <div class="toggle-switch">
-              <input type="checkbox" id="toggle" class="toggle-input">
-              <label for="toggle" class="toggle-label"></label>
-          </div>
+        <p>Remember me</p>
+        <div class="toggle-switch">
+          <input type="checkbox" id="toggle" class="toggle-input">
+          <label for="toggle" class="toggle-label"></label>
+        </div>
       </div>
   
       <input type="submit" value="Log In">
-  </form>
+    </form>
 
     <div id="noPass">
       <a href="#">
