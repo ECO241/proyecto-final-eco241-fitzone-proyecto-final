@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Timer</title>
+    <link rel="stylesheet" href="/src/components/machine/machine.css">
+    <script type="module" src="/src/components/machine/machine.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Leg press</h1>
+        <div class="timer">
+            <span id="time-setter">00:00:00</span>
+            <div class="controls">
+                <button id="decrease-time">&lt;</button>
+                <button id="increase-time">&gt;</button>
+            </div>
+        </div>
+        <div class="timer">
+            <span id="countdown">00:00:00</span>
+            <button id="start-stop">START</button>
+        </div>
+        <div class="image-container">
+            <img src="/src/img/machine-types/strength-machine.png" alt="Leg press machine">
+        </div>
+        <div class="placeholder-blue"></div>
+        <div class="placeholder-gray"></div>
+    </div>
+</body>
+</html>

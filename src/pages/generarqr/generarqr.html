@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generar QR</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div id="qrcode"></div>
+    <script>
+        const url = 'http://localhost:3000/pages/login/login.html';
+        const qrcodeContainer = document.getElementById('qrcode');
+        
+        QRCode.toCanvas(url, function (error, canvas) {
+            if (error) console.error(error);
+            qrcodeContainer.appendChild(canvas);
+        });
+    </script>
+</body>
+</html>

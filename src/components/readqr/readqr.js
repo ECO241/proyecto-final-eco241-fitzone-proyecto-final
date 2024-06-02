@@ -32,7 +32,11 @@ function tick() {
         });
         if (code) {
             console.log("QR Code found: ", code.data);
+            window.location.href = code.data; // Redirect to the URL found in the QR code
+        } else {
+            requestAnimationFrame(tick);
         }
+    } else {
+        requestAnimationFrame(tick);
     }
-    requestAnimationFrame(tick);
 }
