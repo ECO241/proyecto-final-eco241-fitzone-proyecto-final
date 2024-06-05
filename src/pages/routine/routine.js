@@ -23,6 +23,14 @@ class RoutineScreen extends HTMLElement {
 
     connectedCallback() {
         this.render();
+
+        // Añadir el event listener después de renderizar
+        const bigImg = this.shadowRoot.getElementById('bigImg');
+        if (bigImg) {
+            bigImg.addEventListener('click', () => {
+                window.location.href = '/pages/detail/detail.html'; // Redirigir a la página específica
+            });
+        }
     }
 
     createElement(tag, attributes = {}, children = []) {
@@ -47,7 +55,7 @@ class RoutineScreen extends HTMLElement {
         const routinesHeader = this.createElement('h2', {}, [document.createTextNode('Routines for you')]);
 
         const imageContainer = this.createElement('div', { class: 'image-container' }, [
-            this.createElement('img', { src: '../../imgs/component.png', class: 'big-img' }),
+            this.createElement('img', { src: '../../imgs/component.png', class: 'big-img', id: 'bigImg' }),
             this.createElement('img', { src: '../../imgs/comp3.png', class: 'big-img' }),
             this.createElement('img', { src: '../../imgs/component.png', class: 'big-img' })
         ]);

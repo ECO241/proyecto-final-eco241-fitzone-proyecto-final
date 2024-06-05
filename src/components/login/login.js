@@ -1,24 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Script de inicio de sesión cargado.');
-
   const loginForm = document.getElementById('login-form');
 
-  if (loginForm) {
-    loginForm.addEventListener('submit', function(event) {
-      event.preventDefault();
+  loginForm.addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
+    const email = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
 
-      // Provisionalmente almacenamos los datos en localStorage
-      if (username && password) {
-        localStorage.setItem('username', username);
-        localStorage.setItem('password', password);
-        alert('Inicio de sesión exitoso');
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Inicio de sesión exitoso:', data);
+        localStorage.setItem('id', data.user.id); // Guardar id en localStorage
         window.location.href = '/pages/home/home.html';
       } else {
-        alert('Por favor, ingresa un nombre de usuario y una contraseña.');
+        const errorMessage = await response.text();
+        alert(errorMessage);
       }
-    });
-  }
+    } catch (error) {
+      console.error('Error en el inicio de sesión:', error);
+    }
+  });
 });

@@ -38,7 +38,7 @@ function createMachineTypes() {
         createElement(
           "div",
           { className: "card-button-1" },
-          createElement("img", { src: "/src/imgs/machine-types/Cardio.png", alt: "Cardio", className: "card-img" })
+          createElement("img", { src:"../../imgs/machine-types/Cardio.png", alt: "Cardio", className: "card-img" })
         )
       ),
       createElement(
@@ -48,7 +48,7 @@ function createMachineTypes() {
           createElement(
             "div",
             { className: "card-button-2" },
-            createElement("img", { src: "/src/imgs/machine-types/strength-machine.png", alt: "Strength", className: "card-img" })
+            createElement("img", { src: "../../imgs/machine-types/strength-machine.png", alt: "Strength", className: "card-img" })
           )
         ),
         createElement(
@@ -58,14 +58,14 @@ function createMachineTypes() {
             createElement(
               "div",
               { className: "card-button-3" },
-              createElement("img", { src: "/src/imgs/machine-types/specific-body-machine.png", alt: "Flexibility", className: "card-img" })
+              createElement("img", { src: "../../imgs/machine-types/specific-body-machine.png", alt: "Flexibility", className: "card-img" })
             )
           ),
           createElement("li", {},
             createElement(
               "div",
               { className: "card-button-4" },
-              createElement("img", { src: "/src/imgs/machine-types/Functional-machine.png", alt: "Functional", className: "card-img" })
+              createElement("img", { src: "../../imgs/machine-types/Functional-machine.png", alt: "Functional", className: "card-img" })
             )
           )
         )
@@ -97,7 +97,7 @@ function buildPage() {
     createElement(
       "ul",
       { className: "card-list" },
-      createMachineCard("/src/img/machines/Elliptical machine.png", "Elliptical", "Great for cardio and endurance training.", 3, "Second floor"),
+      createMachineCard("../../imgs/machines/Elliptical machine.png", "Elliptical", "Great for cardio and endurance training.", 3, "Second floor"),
       createMachineCard("/src/img/machines/Cable machines.png", "Stationary Bike", "Perfect for high-intensity interval training.", 2, "Third floor")
     )
   );
