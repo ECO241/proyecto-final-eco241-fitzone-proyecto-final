@@ -1,145 +1,145 @@
-/* Estilos base */
 body {
     font-family: "Poppins", sans-serif;
     background-color: #03080E;
-    padding: 20px;
-    text-align: center;
+    color: #FAFAFA;
+    padding: 0;
+    margin: 0;
+    background-image: url('/src/img/background-image/Profile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-h1 {
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #FAFAFA;
+}
+
+.profile-header .time-display {
+    font-size: 1rem;
+}
+
+.profile-header .gear-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.profile-header .gear-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-container {
     text-align: center;
-    background-image: linear-gradient(to right, #FF8B37, #FFC700);
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 2.2rem; /* Ajustar el tamaño de la fuente */
+    padding: 20px;
 }
 
 .profile-picture {
-    width: 195px;
-    height: 195px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    background-color: #FAFAFA;
-    margin: 20px auto;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border: 2px solid #FFC700;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
 }
 
 h2 {
-    color: #FAFAFA;
-    font-size: 1.5rem; /* Ajustar el tamaño de la fuente */
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #FF8B37;
 }
 
-.circles-row {
+.stats-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     margin: 20px 0;
 }
 
-.small-circle {
-    width: 50px;
-    height: 50px;
+.stat {
+    text-align: center;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #FF8B37, #FFC700);
     border-radius: 50%;
-    background-color: #FF8B37;
-    margin: 0 10px;
-}
-
-.large-rectangle {
-    width: 338px;
-    height: 400px; /* Aumentamos la altura del rectángulo principal */
-    background-color: #FF8B37;
-    border-radius: 10px;
-    margin: 20px auto;
-    padding: 20px;
-    box-sizing: border-box;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
 }
 
-.large-rectangle p {
-    color: #FAFAFA;
-    font-size: 1.5rem;
+.stat-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.stat p:first-child {
+    font-size: 1rem;
     margin: 0;
 }
 
-.inner-rectangles {
+.stat p:last-child {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.physical-condition {
+    background: linear-gradient(to right, #FF8B37, #FFC700);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.physical-condition p:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.condition-details {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    gap: 10px; /* Add this line to create a gap between the sections */
 }
 
-.inner-rectangle {
-    width: calc(50% - 10px);
-    height: 280px; /* Aumentamos la altura del rectángulo interno */
+.condition-section {
+    width: 45%; /* Adjusted to accommodate the gap */
     background-color: #A9A9A9;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
-    overflow: hidden; /* Ocultamos el contenido que se desborda */
+    text-align: left;
 }
 
-.inner-rectangle p {
-    margin: 5px 0;
-    color: #FAFAFA;
-    font-size: 1.2rem; /* Ajustar el tamaño de la fuente */
-    line-height: 1.4; /* Ajustar el interlineado */
-    max-height: 60%;
+.progress {
+    background-color: #FFF;
+    border-radius: 5px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: normal; /* Permitir el salto de línea */
+    height: 10px;
+    margin: 10px 0;
 }
 
-/* Media queries para dispositivos móviles */
-@media only screen and (max-width: 600px) {
-    body {
-        background-image: url('/src/img/background-image/Sign\ Up.png');
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+.progress-bar {
+    background-color: #FF8B37;
+    height: 100%;
+}
 
-    h1 {
-        font-size: 1.8rem; /* Ajustar el tamaño de la fuente */
-    }
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 
-    .profile-picture {
-        width: 150px;
-        height: 150px;
-    }
-
-    .small-circle {
-        width: 40px;
-        height: 40px;
-    }
-
-    .large-rectangle {
-        width: 90%;
-        height: auto;
-        padding: 10px;
-        flex-direction: column;
-    }
-
-    .large-rectangle p {
-        font-size: 1.2rem; /* Ajustar el tamaño de la fuente */
-    }
-
-    .inner-rectangles {
-        flex-direction: row; /* Cambiar a fila para que los rectángulos estén uno al lado del otro */
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .inner-rectangle {
-        width: calc(50% - 10px); /* Asegurarse de que cada rectángulo ocupe la mitad del ancho disponible menos el margen */
-        height: 80px;
-        margin-top: 0; /* Eliminar el margen superior para mantener la alineación */
-    }
-
-    .inner-rectangle p {
-        font-size: 0.2rem; /* Ajustar el tamaño de la fuente */
-    }
+.edit-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #03080E;
 }
