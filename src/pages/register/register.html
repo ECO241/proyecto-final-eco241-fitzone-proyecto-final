@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro</title>
-  <link rel="stylesheet" href="../../resources/css/styles.css">
-  <script src="../../resources/js/register.js" defer></script>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="/pages/register/register.css">
+  <script src="/pages/register/register.js" defer></script>
 </head>
 <body>
-  <h1>Registro</h1>
-  <form action="/register" method="POST">
-    <label for="username">Nombre de usuario:</label><br>
-    <input type="text" id="username" name="username"><br>
-    <label for="password">Contraseña:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-    <input type="submit" value="Registrarse">
+  <h1>Create your<br>Account</h1>
+  <h3>Unlock Your Potential!</h3>
+  <form id="register-form">
+    <input type="text" id="name" name="name" placeholder="Name" required><br>
+    <input type="email" id="email" name="email" placeholder="Email" required><br>
+    <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+    <input type="submit" value="Sign Up">
+    <p>By signing up you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
   </form>
+  <p>Already have an account? <a href="/pages/login/login.html">Log In</a>.</p>
 </body>
 </html>

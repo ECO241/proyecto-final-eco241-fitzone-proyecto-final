@@ -9,35 +9,38 @@ h1 {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 p {
   color: white;
   background: none;
+  font-size: large;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
 }
 
 img {
   max-width: 40px;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
 .gradient-button {
-    margin-top: 190px;
-    height: 60px;
-    width: 320px;
-    background: linear-gradient(#ffc700, #ff8b37);
-    border: none;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
-    text-decoration: none;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
+  margin-top: 60px;
+  height: 60px;
+  width: 320px;
+  background: linear-gradient(#ffc700, #ff8b37);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: x-large;
+  transition: background 0.3s;
+  text-decoration: none;
+}
   
   .gradient-button:hover {
     background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
@@ -48,12 +51,9 @@ img {
     margin-bottom: 20px;
     width: 320px;
     height: 60px;
-    background: linear-gradient(
-      to right,
-      rgba(244, 244, 249, 0.6),
-      rgba(3, 8, 14, 0.6)
-    );    
+    background-color: rgba(255, 255, 255, 0.185);
     color: white;
+    font-size: x-large;
     text-align: center;
     cursor: pointer;
     display: flex; 

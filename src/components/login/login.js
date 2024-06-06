@@ -1,13 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Script de inicio de sesión cargado.');
-
-  // Manejo del formulario de inicio de sesión:
   const loginForm = document.getElementById('login-form');
 
   loginForm.addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
-    const username = document.getElementById('username').value; 
+    const email = document.getElementById('username').value;
     const password = document.getElementById('password').value;
 
     try {
@@ -16,19 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username, password })
+        body: JSON.stringify({ email, password })
       });
 
       if (response.ok) {
-        // Guardar el nombre de usuario en sessionStorage:
-        sessionStorage.setItem('username', username);
+        const data = await response.json();
+        console.log('Inicio de sesión exitoso:', data);
+        localStorage.setItem('id', data.user.id); // Guardar id en localStorage
         window.location.href = '/pages/home/home.html';
       } else {
         const errorMessage = await response.text();
         alert(errorMessage);
       }
     } catch (error) {
-      console.error('Error al iniciar sesión:', error);
+      console.error('Error en el inicio de sesión:', error);
     }
   });
 });

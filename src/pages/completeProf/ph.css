@@ -1,6 +1,15 @@
 * {
-  background-color: #03080e;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
+  background-color: #03080E;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -9,11 +18,20 @@ h1 {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 0px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 p {
   color: white;
   background: none;
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+img .imgBack {
+  max-width: 40px;
+  margin-top: 15px;
+  margin-left: 20px;
 }
 
 img {
@@ -31,7 +49,7 @@ img {
   padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: x-large;
   transition: background 0.3s;
   text-decoration: none;
   display: flex;
@@ -44,6 +62,7 @@ img {
 }
 
 .circle-container {
+  margin-top: 50px;
   width: 195px;
   height: 195px;
   border-radius: 50%;
@@ -52,10 +71,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    rgba(244, 244, 249, 0.1),
-    rgba(244, 244, 249, 0.6)
-  );
+  background-color: rgba(255, 255, 255, 0.185);
 }
 
 .user-image {
@@ -70,16 +86,20 @@ form {
   border-radius: 10px;
   width: 300px;
   margin-top: 30px;
+  display: block;
+  margin-right: 50px;
 }
 
 .input-group {
   display: flex;
   justify-content: space-between;
+  height: 50px;
 }
 
 .input-group input[type="number"] {
   width: 145px;
   height: 30px;
+  font-size: large;
 }
 
 input[type="text"],
@@ -87,15 +107,12 @@ input[type="number"],
 select {
   width: 320px;
   height: 60px;
-  padding: 6px;
+  padding: 20px;
   border: none;
-  border-radius: 15px;
-  background: linear-gradient(
-    to right,
-    rgba(244, 244, 249, 0.6),
-    rgba(3, 8, 14, 0.6)
-  );
-  color: white;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.185);
+  color:white;
+  font-size: large;
 }
 
 label {
@@ -103,7 +120,7 @@ label {
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
+  color: #03080E;
   pointer-events: none;
   transition: top 0.3s, font-size 0.3s, color 0.3s;
 }
@@ -113,7 +130,7 @@ select:focus + label,
 input:not(:placeholder-shown) + label,
 select:not(:placeholder-shown) + label {
   top: 0;
-  font-size: 12px;
+  font-size: x-large;;
   color: #ccc;
 }
 
@@ -128,7 +145,6 @@ button {
   display: flex;
   flex-direction: row-reverse;
   margin-top: 20px;
- 
 }
 
 ::placeholder {
@@ -136,14 +152,14 @@ button {
 }
 
 .custom-input {
-  background: linear-gradient(to right, rgba(244, 244, 249, 0.6), rgba(3, 8, 14, 0.6));
+  background-color: rgba(255, 255, 255, 0.185);
   width: 320px;
   height: 60px;
   border: none;
   border-radius: 15px;
   padding: 10px;
   color: white;
-  font-size: 16px;
+  font-size: x-large;
   box-sizing: border-box; 
 }
 

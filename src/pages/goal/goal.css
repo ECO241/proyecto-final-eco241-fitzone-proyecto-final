@@ -1,6 +1,15 @@
 * {
-  background-color: #03080e;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: "Poppins", sans-serif;
+  background-color: #03080E;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -9,11 +18,14 @@ h1 {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  margin-top: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 p {
   color: white;
   background: none;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .container {
@@ -22,13 +34,13 @@ p {
   align-items: center;
   position: relative;
   padding: 10px;
-  background: linear-gradient(
-    to right,
-    rgba(244, 244, 249, 0.6),
-    rgba(3, 8, 14, 0.6)
-  );
-  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.185);
   margin-bottom: 15px;
+  height: 70px;
+  width: 85%;
+  margin-top: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .container::before {
@@ -91,7 +103,7 @@ p {
 }
 
 .gradient-button {
-  margin-top: 10px;
+  margin-top: 30px;
   height: 60px;
   width: 320px;
   background: linear-gradient(#ffc700, #ff8b37);
@@ -101,7 +113,7 @@ p {
   padding: 10px 20px;
   border-radius: 15px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: x-large;
   transition: background 0.3s;
   text-decoration: none;
 }
@@ -112,4 +124,6 @@ p {
 
 img {
   max-width: 40px;
+  margin-top: 15px;
+  margin-left: 20px;
 }
