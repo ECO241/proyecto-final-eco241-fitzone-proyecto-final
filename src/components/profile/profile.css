@@ -1,0 +1,145 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #03080E;
+    color: #FAFAFA;
+    padding: 0;
+    margin: 0;
+    background-image: url('/src/img/background-image/Profile.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #FAFAFA;
+}
+
+.profile-header .time-display {
+    font-size: 1rem;
+}
+
+.profile-header .gear-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.profile-header .gear-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border: 2px solid #FFC700;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #FF8B37;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to right, #FF8B37, #FFC700);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px;
+}
+
+.stat-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.stat p:first-child {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.stat p:last-child {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.physical-condition {
+    background: linear-gradient(to right, #FF8B37, #FFC700);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.physical-condition p:first-child {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.condition-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Add this line to create a gap between the sections */
+}
+
+.condition-section {
+    width: 45%; /* Adjusted to accommodate the gap */
+    background-color: #A9A9A9;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.progress {
+    background-color: #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #FF8B37;
+    height: 100%;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.edit-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: #03080E;
+}

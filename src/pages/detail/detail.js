@@ -30,7 +30,7 @@ function buildDetailPage() {
         'div',
         { className: 'header-image' },
         createElement('img', {
-            src: '/src/img/background-image/Fondo Detail.png',
+            src: '../../imgs/background-image/Fondo Detail.png',
             alt: 'Header Image'
         })
     );
