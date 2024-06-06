@@ -1,0 +1,83 @@
+* {
+  background-color: #03080e;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  background-image: linear-gradient(to right, #ff8b37, #ffc700);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: 20px;
+}
+p {
+  color: white;
+  background: none;
+  font-size: large;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+img {
+  max-width: 40px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.gradient-button {
+  margin-top: 60px;
+  height: 60px;
+  width: 320px;
+  background: linear-gradient(#ffc700, #ff8b37);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: x-large;
+  transition: background 0.3s;
+  text-decoration: none;
+}
+  
+  .gradient-button:hover {
+    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  }
+  
+  .container {
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 320px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.185);
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    cursor: pointer;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .container:hover {
+    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  }
+  
+  input[type="checkbox"]:checked + label .container {
+    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  }
+  
+  input[type="checkbox"].checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  
+  .options {
+    margin-top: 100px;
+  }

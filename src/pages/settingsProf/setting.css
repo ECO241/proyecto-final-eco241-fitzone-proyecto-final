@@ -1,0 +1,135 @@
+* {
+  background-color: #03080e;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: left;
+  background-image: linear-gradient(to right, #FF8B37, #FFC700);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-left: 20px;
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align:left;
+  color: #FAFAFA;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+img {
+  max-width: 40px;
+  margin-left: 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0.322);
+  border-radius: 15px;
+  width: calc(100% - 30px);
+}
+
+.photo {
+    max-width: 80px;
+    margin-right: 10px; 
+  background: none;
+}
+
+.photo-icon {
+    max-width: 70px;
+    margin-right: 20px; 
+    margin-left: 10px;
+  background: none;
+}
+.photo img {
+  align-items: center;
+  align-self: center;
+  background: none;
+}
+
+.photo-icon img {
+    align-items: center;
+    align-self: center;
+    background: none;
+}
+
+.info {
+    margin-left: 40px;
+  background: none;
+  flex-grow: 1;
+}
+
+.info-2 {
+    margin-left: 20px;
+    background: none;
+  flex-grow: 1;
+}
+
+.info-2 h3 {
+    background: none;
+    margin: 0;
+    font-weight:normal;
+    color: white;
+  }
+
+.info h3 {
+  background: none;
+  margin: 0;
+  font-weight:normal;
+  color: white;
+}
+
+.info p {
+  background: none;
+  margin-top: 5px;
+  color: rgb(187, 187, 187);
+}
+
+.info-2 p {
+    background: none;
+    margin-top: 5px;
+    color: rgb(187, 187, 187);
+  }
+
+  .gradient-button {
+    margin-top: 40px;
+    height: 60px;
+    width: 320px;
+    background: linear-gradient(#ffc700, #ff8b37);
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: x-large;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 40px;
+  }
+  
+  .gradient-button:hover {
+    background: linear-gradient(rgba(255, 139, 55, 0.35), rgba(255, 199, 0, 0.6));
+  }

@@ -1,0 +1,33 @@
+:root {
+    --colorButton1-start: #FF8B37;
+    --colorButton1-end: #FFC700;
+    --colorForum: #585A60;
+    --backgroundColorFitzone: #02070C;
+    --fitzoneOrange: #FF8B37;
+    --fitzoneYellow: #FFC700;
+  }
+  
+  @font-face {
+    font-family: 'Poppins';
+    src: url('../../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #03080E;
+    padding: 20px;
+    margin: 20px;
+    overflow-x: hidden;
+    color: #FAFAFA;
+  }
+
+  
